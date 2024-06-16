@@ -50,7 +50,7 @@ $(document).ready(function() {
             // Second click behavior
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
-            txt.hide().html("ที่สอนให้รักตัวเอง แต่รักแป้งอแป้งอะดีแล้ว").fadeIn(300, function() {
+            txt.hide().html("ที่สอนให้รักตัวเอง แต่รักแป้งอะดีแล้ว").fadeIn(300, function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
             });
