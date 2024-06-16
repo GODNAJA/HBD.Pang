@@ -22,6 +22,14 @@ $(document).ready(function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
             });
+        } else if (clickCount === 3) {
+            // Second click behavior
+            flame.removeClass("burn").addClass("puff");
+            $("#glow").hide();
+            txt.hide().html("แก่แล้ว อย่าเพิ่งตายก่อนนะ").fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
+                $("#glow").show();
+            });
         } else {
             // Third click and subsequent behavior
             flame.removeClass("burn").addClass("puff");
