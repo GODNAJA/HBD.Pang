@@ -26,6 +26,14 @@ $(document).ready(function() {
             // Second click behavior
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
+            txt.hide().html("ไอแก่ ไอแก่ ไอแก่").fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
+                $("#glow").show();
+            });
+        } else if (clickCount === 4) {
+            // Second click behavior
+            flame.removeClass("burn").addClass("puff");
+            $("#glow").hide();
             txt.hide().html("แก่แล้ว อย่าเพิ่งตายก่อนนะ").fadeIn(300, function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
