@@ -5,7 +5,9 @@ $(document).ready(function() {
 
     flame.on("click", function() {
         if (!clicked) {
+            flame.removeClass("burn").addClass("puff");
             txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300);
+            flame.addClass("burn").removeClass("puff");
             clicked = true; // เปลี่ยนสถานะเป็นคลิกแล้ว
         } else {
             flame.removeClass("burn").addClass("puff");
