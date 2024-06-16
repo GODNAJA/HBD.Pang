@@ -20,7 +20,7 @@ $(document).ready(function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
                 clicked = true; 
-
+            });
         } else {
             // Second click behavior
             flame.removeClass("burn").addClass("puff");
