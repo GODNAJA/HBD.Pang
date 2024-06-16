@@ -11,7 +11,7 @@ $(document).ready(function() {
             txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300, function() {
                 flame.addClass("burn").removeClass("puff").fadeIn(300);
                 // Add glow element again
-                flame.addClass("#glow");
+                $("#glow").add();
                 clicked = true; // Set clicked to true after the first click
             });
         } else {
