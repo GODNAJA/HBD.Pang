@@ -16,7 +16,7 @@ $(document).ready(function() {
         }else{
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
-            txt.hide().html("สุขสันต์วันเกิดนะ").delay(750).fadeIn(300, function() {
+            txt.hide().html("แก่อีกปีแล้ว ว้ายๆ").delay(750).fadeIn(300, function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
                 clicked = true; 
