@@ -71,6 +71,22 @@ $(document).ready(function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
             });
+        } else if (clickCount === 9) {
+            // Second click behavior
+            flame.removeClass("burn").addClass("puff");
+            $("#glow").hide();
+            txt.hide().html("ขอให้ไม่ปวดหลัง").fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
+                $("#glow").show();
+            });
+        } else if (clickCount === 10) {
+            // Second click behavior
+            flame.removeClass("burn").addClass("puff");
+            $("#glow").hide();
+            txt.hide().("ขอให้สวยขึ้น ตอนนี้ก็สวยที่สุดในโลกแล้ว").fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
+                $("#glow").show();
+            });
         } else {
             // Third click and subsequent behavior
             flame.removeClass("burn").addClass("puff");
