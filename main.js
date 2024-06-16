@@ -75,7 +75,7 @@ $(document).ready(function() {
             // Second click behavior
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
-            txt.hide().html("ขอให้ไม่ปวดหลัง").fadeIn(300, function() {
+            txt.hide().html("ขอให้แป้งไม่ปวดหลัง").fadeIn(300, function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
             });
@@ -83,7 +83,15 @@ $(document).ready(function() {
             // Second click behavior
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
-            txt.hide().("ขอให้สวยขึ้น ตอนนี้ก็สวยที่สุดในโลกแล้ว").fadeIn(300, function() {
+            txt.hide().("ขอให้แป้งสวยขึ้น ตอนนี้ก็สวยที่สุดในโลกแล้ว").fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
+                $("#glow").show();
+            });
+        } else if (clickCount === 11) {
+            // Second click behavior
+            flame.removeClass("burn").addClass("puff");
+            $("#glow").hide();
+            txt.hide().("ขอให้แป้งใจดีมากๆนะ").fadeIn(300, function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
             });
@@ -94,7 +102,7 @@ $(document).ready(function() {
                 $(this).addClass("puff-bubble");
             });
             $("#glow").remove();
-            txt.hide().html("ขอให้แป้งใจดีมากๆ").delay(750).fadeIn(300);
+            txt.hide().html("ขอให้แป้งมีความสุขมากๆนะ").delay(750).fadeIn(300);
             $("#candle").animate({
                 opacity: 0.5
             }, 100);
