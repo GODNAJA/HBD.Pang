@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Pang Birthday</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
     <link rel="icon" href="Fly Bats logo.png">
-
+    <style>
+        /* Optional: Add CSS for h2 initially hidden */
+        #h2 {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-      ขอบคุณนะ
-      เป่าเทียน</h1>
-     <div class="glow" id="glow"></div>
-     <div id="candle">
+    <h1 id="h1">เป่าเทียน</h1>
+    <h2 id="h2">ขอบคุณนะ</h2>
+
+    <div class="glow" id="glow"></div>
+
+    <div id="candle">
        <div class="stripe"></div>
        <div class="stripe"></div>
        <div class="stripe"></div>
@@ -28,6 +32,23 @@
          <div id="knot"></div>
          <div class="burn" id="flame"></div>
        </div>
-     </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="main.js"></script>
+
+    <script>
+        // JavaScript to toggle visibility of h2 when h1 is clicked
+        document.getElementById('h1').addEventListener('click', function() {
+            var h2 = document.getElementById('h2');
+            if (h2.style.display === 'none') {
+                h2.style.display = 'block';
+            } else {
+                h2.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
