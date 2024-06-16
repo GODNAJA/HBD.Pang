@@ -8,11 +8,19 @@ $(document).ready(function() {
             // First click behavior
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
-            txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300, function() {
-                flame.addClass("burn").removeClass("puff").fadeIn(300);
+            txt.hide().html("สุขสันต์วันเกิดนะ").delay(750).fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
-                clicked = true; // Set clicked to true after the first click
+                clicked = false; // Set clicked to true after the first click
             });
+        }else{
+            flame.removeClass("burn").addClass("puff");
+            $("#glow").hide();
+            txt.hide().html("สุขสันต์วันเกิดนะ").delay(750).fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
+                $("#glow").show();
+                clicked = true; 
+
         } else {
             // Second click behavior
             flame.removeClass("burn").addClass("puff");
