@@ -38,6 +38,14 @@ $(document).ready(function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
             });
+        } else if (clickCount === 5) {
+            // Second click behavior
+            flame.removeClass("burn").addClass("puff");
+            $("#glow").hide();
+            txt.hide().html("ปีที่แล้ว ขอบคุณนะ 🙏🏻🙏🏻").fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
+                $("#glow").show();
+            });
         } else {
             // Third click and subsequent behavior
             flame.removeClass("burn").addClass("puff");
