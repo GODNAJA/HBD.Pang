@@ -1,28 +1,29 @@
 $(document).ready(function() {
     var flame = $("#flame");
     var txt = $("h1");
-    var clicked = false; // Variable to track if it's the first or second click
+    var clickCount = 0; // Variable to count the number of clicks
 
     flame.on("click", function() {
-        if (!clicked) {
+        clickCount++; // Increase click count every time flame is clicked
+
+        if (clickCount === 1) {
             // First click behavior
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
-            txt.hide().html("สุขสันต์วันเกิดนะ").delay(750).fadeIn(300, function() {
+            txt.hide().html("สุขสันต์วันเกิดนะ").fadeIn(300, function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
-                clicked = false; // Set clicked to true after the first click
             });
-        }else{
+        } else if (clickCount === 2) {
+            // Second click behavior
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
-            txt.hide().html("แก่อีกปีแล้ว ว้ายๆ").delay(750).fadeIn(300, function() {
+            txt.hide().html("แก่อีกปีแล้ว ว้ายๆ").fadeIn(300, function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
-                clicked = true; 
             });
         } else {
-            // Second click behavior
+            // Third click and subsequent behavior
             flame.removeClass("burn").addClass("puff");
             $(".smoke").each(function() {
                 $(this).addClass("puff-bubble");
