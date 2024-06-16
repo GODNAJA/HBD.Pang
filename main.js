@@ -9,7 +9,7 @@ $(document).ready(function() {
             flame.removeClass("burn").addClass("puff");
             $("#glow").remove();
             txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300, function() {
-                flame.addClass("burn").removeClass("puff");
+                flame.addClass("burn").removeClass("puff").fadeIn(300);
                 clicked = true; // Set clicked to true after the first click
             });
         } else {
