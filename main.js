@@ -10,6 +10,7 @@ $(document).ready(function() {
             $(this).addClass("puff-bubble");
         });
         $("#glow").remove();
+        txt.hide().html("ขอให้แป้งใจดีมากๆ").delay(750).fadeIn(300);
         txt.hide().html("ขอให้แป้งใจดีมากๆนะ").delay(750).fadeIn(300);
         $("#candle").animate(
             {
