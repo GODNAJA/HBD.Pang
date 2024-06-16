@@ -10,7 +10,7 @@ $(document).ready(function() {
             // First click behavior
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
-            txt.hide().html("สุขสันต์วันเกิดนะ").fadeIn(300, function() {
+            txt.hide().html("สุขสันต์วันเกิดนะ 🎉🎉").fadeIn(300, function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
             });
@@ -18,7 +18,7 @@ $(document).ready(function() {
             // Second click behavior
             flame.removeClass("burn").addClass("puff");
             $("#glow").hide();
-            txt.hide().html("แก่อีกปีแล้ว ว้ายๆ").fadeIn(300, function() {
+            txt.hide().html("แก่อีกปีแล้ว ว้ายๆ ").fadeIn(300, function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
             });
