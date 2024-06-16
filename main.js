@@ -54,6 +54,23 @@ $(document).ready(function() {
                 flame.removeClass("puff").addClass("burn").fadeIn(300);
                 $("#glow").show();
             });
+        } else if (clickCount === 7) {
+            // Second click behavior
+            flame.removeClass("burn").addClass("puff");
+            $("#glow").hide();
+            txt.hide().html("วันเกิดแป้ง ขอให้... 🌕").fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
+                $("#glow").show();
+            });
+
+        } else if (clickCount === 8) {
+            // Second click behavior
+            flame.removeClass("burn").addClass("puff");
+            $("#glow").hide();
+            txt.hide().html("ขอให้แป้งไม่ปวดท้อง").fadeIn(300, function() {
+                flame.removeClass("puff").addClass("burn").fadeIn(300);
+                $("#glow").show();
+            });
         } else {
             // Third click and subsequent behavior
             flame.removeClass("burn").addClass("puff");
