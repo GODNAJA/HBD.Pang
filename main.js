@@ -7,6 +7,7 @@ $(document).ready(function() {
         if (!clicked) {
             // First click behavior
             flame.removeClass("burn").addClass("puff");
+            $("#glow").remove();
             txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300, function() {
                 flame.addClass("burn").removeClass("puff");
                 clicked = true; // Set clicked to true after the first click
