@@ -7,11 +7,9 @@ $(document).ready(function() {
         if (!clicked) {
             // First click behavior
             flame.removeClass("burn").addClass("puff");
-            $("#glow").remove();
+            $("#glow").hide();
             txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300, function() {
                 flame.addClass("burn").removeClass("puff").fadeIn(300);
-                // Add glow element again
-                $("<div id='glow'></div>").insertAfter(flame);
                 clicked = true; // Set clicked to true after the first click
             });
         } else {
