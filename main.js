@@ -1,15 +1,18 @@
 $(document).ready(function() {
     var flame = $("#flame");
     var txt = $("h1");
-    var clicked = false; // เพิ่มตัวแปรเพื่อตรวจสอบว่าเป็นคลิกครั้งแรกหรือครั้งที่สอง
+    var clicked = false; // Variable to track if it's the first or second click
 
     flame.on("click", function() {
         if (!clicked) {
+            // First click behavior
             flame.removeClass("burn").addClass("puff");
-            txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300);
-            flame.addClass("burn").removeClass("puff");
-            clicked = true; // เปลี่ยนสถานะเป็นคลิกแล้ว
+            txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300, function() {
+                flame.addClass("burn").removeClass("puff");
+                clicked = true; // Set clicked to true after the first click
+            });
         } else {
+            // Second click behavior
             flame.removeClass("burn").addClass("puff");
             $(".smoke").each(function() {
                 $(this).addClass("puff-bubble");
@@ -17,7 +20,7 @@ $(document).ready(function() {
             $("#glow").remove();
             txt.hide().html("ขอให้แป้งใจดีมากๆ").delay(750).fadeIn(300);
             $("#candle").animate({
-                opacity: ".5"
+                opacity: 0.5
             }, 100);
         }
     });
