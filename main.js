@@ -5,6 +5,9 @@ $(document).ready(function() {
 
     flame.on({
         click: function () {
+           txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300); 
+        }
+        click: function () {
         flame.removeClass("burn").addClass("puff");
         $(".smoke").each(function () {
             $(this).addClass("puff-bubble");
