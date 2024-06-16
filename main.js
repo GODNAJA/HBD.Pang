@@ -1,19 +1,22 @@
-flame.on({
-    click: function () {
-       txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300); 
-    }
-    click: function () {
-    flame.removeClass("burn").addClass("puff");
-    $(".smoke").each(function () {
-        $(this).addClass("puff-bubble");
+$(document).ready(function() {
+    var flame = $("#flame");
+    var txt = $("h1");
+    var clicked = false; // เพิ่มตัวแปรเพื่อตรวจสอบว่าเป็นคลิกครั้งแรกหรือครั้งที่สอง
+
+    flame.on("click", function() {
+        if (!clicked) {
+            txt.hide().html("ขอให้แป้งใจดี").delay(750).fadeIn(300);
+            clicked = true; // เปลี่ยนสถานะเป็นคลิกแล้ว
+        } else {
+            flame.removeClass("burn").addClass("puff");
+            $(".smoke").each(function() {
+                $(this).addClass("puff-bubble");
+            });
+            $("#glow").remove();
+            txt.hide().html("ขอให้แป้งใจดีมากๆ").delay(750).fadeIn(300);
+            $("#candle").animate({
+                opacity: ".5"
+            }, 100);
+        }
     });
-    $("#glow").remove();
-    txt.hide().html("ขอให้แป้งใจดีมากๆ").delay(750).fadeIn(300);
-    $("#candle").animate(
-        {
-        opacity: ".5"
-        },
-        100
-    );
-    }
 });
